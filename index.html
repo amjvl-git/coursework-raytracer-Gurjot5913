@@ -19,6 +19,7 @@ class Vec3
         this.y = y
         this.z = z
     }
+    
 
     // Add other vector to this one and return the result
     add(other)
@@ -27,27 +28,49 @@ class Vec3
     }
 
     // Subtract other vector from this one and return the result
-    minus(other){}
+    minus(other)
+    {
+        return new Vec3(this.x - other.x, this.y - other.y, this.z - other.z)
+    }
 
     // Multiply other vector by this one and return the result
-    multiply(other){}
+    multiply(other)
+    {
+        return new Vec3(this.x * other.x, this.y * other.y, this.z * other.z)
+    }
 
     // Scale this vector by the number scalar and return the result
-    scale(scalar){}
+    scale(scalar)
+    {
+        return new Vec3(this.x - other.x, this.y - other.y, this.z - other.z)
+    }
     
     // Calculate the dot product of this vector with the other and return the result
-    dot(other) {}
+    dot(other) 
+    {
+        return (this.x * other.x + this.y * other.y + this.z * other.z)
+    }
 
     // Calculate and return the magnitude of this vector
-    magnitude() {}
+    magnitude() 
+    {
+        return Math.sqrt(this.x ** 2 + this.y ** 2 + this.z ** 2)
+    }
     
     // Calculate and return the magnitude of this vector without the square root
-    magnitudeSquared() {}
+    magnitudeSquared() 
+    {
+        return (this.x ** 2 + this.y ** 2 + this.z ** 2)
+    }
 
     // Return a normalised version of this vector
-    normalised() {}
-}
+    normalised() 
+    {
 
+    }
+}
+const var1 = new Vec3 (10, 20, 30)
+const var2 = new Vec3 (1, 2 , 3)
 // A sphere in 3D space. Has centre, radius and colour all of which are Vec3s
 class Sphere
 {
@@ -153,6 +176,8 @@ for (let i = 0; i < imageWidth; i++)
         setPixel(i,j,colour)
     }
 }
+
+console.log(var1.add(var2))
 
 </script>
 
